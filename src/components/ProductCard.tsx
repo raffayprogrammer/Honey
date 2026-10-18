@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star, Heart, Plus } from "lucide-react";
-import JarIllustration from "./JarIllustration";
 import { CURRENCY, type Product } from "@/data/products";
 
 const badgeStyles: Record<string, string> = {
@@ -24,7 +24,15 @@ export default function ProductCard({ product }: { product: Product }) {
       className="group relative flex flex-col overflow-hidden rounded-3xl border border-honey-200 bg-cream-50 shadow-soft"
     >
       {/* media */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-honey-100 to-cream-200 p-6">
+      <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-honey-100 to-cream-200">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 270px"
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
+
         <div className="absolute left-3 top-3 z-10 flex flex-col gap-1.5">
           {product.badge && (
             <span
@@ -36,7 +44,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </span>
           )}
           {discount > 0 && (
-            <span className="rounded-full bg-rose-100 px-2.5 py-1 text-[11px] font-bold text-rose-700">
+            <span className="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-bold text-rose-700 shadow">
               -{discount}%
             </span>
           )}
@@ -48,10 +56,6 @@ export default function ProductCard({ product }: { product: Product }) {
         >
           <Heart size={16} />
         </button>
-
-        <div className="mx-auto h-40 w-28 transition-transform duration-500 group-hover:-translate-y-1 group-hover:scale-105">
-          <JarIllustration color={product.color} className="h-full w-full drop-shadow-md" />
-        </div>
       </div>
 
       {/* body */}

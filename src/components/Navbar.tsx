@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   Search,
@@ -81,11 +82,15 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3">
           {/* Logo */}
           <a href="#top" className="flex shrink-0 items-center gap-2">
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-honey-400 to-honey-600 text-cocoa-900 shadow-glow">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                <path d="M12 2c-1 2.5-3 4-3 6a3 3 0 0 0 6 0c0-2-2-3.5-3-6Z" />
-                <path d="M5 13h14l-1.5 7.5A2 2 0 0 1 15.5 22h-7a2 2 0 0 1-2-1.5L5 13Z" />
-              </svg>
+            <span className="relative h-12 w-12 shrink-0">
+              <Image
+                src="/logo.jpeg"
+                alt="Pak Honey"
+                fill
+                priority
+                sizes="48px"
+                className="object-contain mix-blend-multiply"
+              />
             </span>
             <span className="font-serif text-xl font-bold leading-none text-cocoa-900">
               PAK&nbsp;<span className="text-gradient-honey">HONEY</span>

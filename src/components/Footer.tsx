@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Facebook,
   Instagram,
@@ -62,11 +63,14 @@ export default function Footer() {
         <div className="relative mt-14 grid gap-10 pb-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-honey-400 to-honey-600 text-cocoa-900">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M12 2c-1 2.5-3 4-3 6a3 3 0 0 0 6 0c0-2-2-3.5-3-6Z" />
-                  <path d="M5 13h14l-1.5 7.5A2 2 0 0 1 15.5 22h-7a2 2 0 0 1-2-1.5L5 13Z" />
-                </svg>
+              <span className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-cream-50">
+                <Image
+                  src="/logo.jpeg"
+                  alt="Pak Honey"
+                  width={38}
+                  height={38}
+                  className="object-contain mix-blend-multiply"
+                />
               </span>
               <span className="font-serif text-xl font-bold">
                 PAK&nbsp;<span className="text-honey-400">HONEY</span>

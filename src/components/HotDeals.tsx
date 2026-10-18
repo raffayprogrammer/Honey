@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Flame, ArrowRight } from "lucide-react";
 import { hotDeals, CURRENCY } from "@/data/products";
-import JarIllustration from "./JarIllustration";
 
 function useCountdown(hoursFromNow = 12) {
   const [left, setLeft] = useState("");
@@ -29,8 +29,9 @@ export default function HotDeals() {
   const countdown = useCountdown(14);
 
   return (
-    <section id="deals" className="relative py-20">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="deals" className="relative py-20 bg-honey-mesh">
+      <div className="honeycomb absolute inset-0 opacity-50" />
+      <div className="relative mx-auto max-w-7xl px-4">
         <div className="mb-10 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
           <div>
             <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-rose-600">
@@ -57,56 +58,45 @@ export default function HotDeals() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: i * 0.12, duration: 0.6 }}
-              className="group relative overflow-hidden rounded-3xl border border-honey-200 bg-gradient-to-br from-cream-100 to-cream-200 p-7 shadow-soft"
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-honey-200 bg-cream-50 shadow-soft"
             >
-              {/* glow */}
-              <div
-                className="absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-30 blur-2xl transition group-hover:opacity-50"
-                style={{ background: deal.color }}
-              />
-              <span className="relative inline-block rounded-full bg-rose-500 px-3 py-1 text-xs font-bold text-white shadow">
-                {deal.tag}
-              </span>
-
-              <div className="relative mt-4 flex items-center gap-2">
-                {deal.productIds.map((_, idx) => (
-                  <div
-                    key={idx}
-                    className="h-24 w-16 animate-float"
-                    style={{ animationDelay: `${idx * 0.4}s` }}
-                  >
-                    <JarIllustration
-                      color={deal.color}
-                      className="h-full w-full drop-shadow"
-                    />
-                  </div>
-                ))}
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src={deal.image}
+                  alt={deal.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="absolute left-4 top-4 z-10 rounded-full bg-rose-500 px-3 py-1 text-xs font-bold text-white shadow">
+                  {deal.tag}
+                </span>
               </div>
 
-              <h3 className="relative mt-5 font-serif text-2xl font-bold text-cocoa-900">
-                {deal.title}
-              </h3>
-              <p className="relative mt-1 text-sm text-cocoa-700">
-                {deal.subtitle}
-              </p>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="font-serif text-2xl font-bold text-cocoa-900">
+                  {deal.title}
+                </h3>
+                <p className="mt-1 text-sm text-cocoa-700">{deal.subtitle}</p>
 
-              <div className="relative mt-5 flex items-center justify-between">
-                <div className="flex items-baseline gap-2">
-                  <span className="font-serif text-3xl font-bold text-honey-700">
-                    {deal.price}
-                    <span className="ml-1 text-sm font-sans">{CURRENCY}</span>
-                  </span>
-                  <span className="text-lg text-cocoa-700/50 line-through">
-                    {deal.oldPrice}
-                  </span>
+                <div className="mt-5 flex items-center justify-between">
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-3xl font-bold text-honey-700">
+                      {deal.price}
+                      <span className="ml-1 text-sm font-sans">{CURRENCY}</span>
+                    </span>
+                    <span className="text-lg text-cocoa-700/50 line-through">
+                      {deal.oldPrice}
+                    </span>
+                  </div>
+                  <button className="inline-flex items-center gap-1.5 rounded-full bg-cocoa-900 px-5 py-2.5 text-sm font-semibold text-honey-200 transition hover:bg-cocoa-800">
+                    Grab it
+                    <ArrowRight
+                      size={16}
+                      className="transition group-hover:translate-x-1"
+                    />
+                  </button>
                 </div>
-                <button className="inline-flex items-center gap-1.5 rounded-full bg-cocoa-900 px-5 py-2.5 text-sm font-semibold text-honey-200 transition hover:bg-cocoa-800">
-                  Grab it
-                  <ArrowRight
-                    size={16}
-                    className="transition group-hover:translate-x-1"
-                  />
-                </button>
               </div>
             </motion.div>
           ))}
