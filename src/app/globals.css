@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #fffdf8;
+  --color-foreground: #211610;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-raleway), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-gradient-honey {
+    background: linear-gradient(90deg, #e08c13 0%, #f0a830 45%, #c8891b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-honey-mesh {
+    background-color: #fff8ec;
+    background-image: radial-gradient(
+        at 12% 18%,
+        rgba(247, 193, 91, 0.35) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 88% 10%, rgba(240, 168, 48, 0.25) 0px, transparent 50%),
+      radial-gradient(at 78% 92%, rgba(251, 216, 148, 0.4) 0px, transparent 55%);
+  }
+
+  .glass {
+    background: rgba(255, 253, 248, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(240, 168, 48, 0.25);
+  }
+
+  .honeycomb {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='56' height='100' viewBox='0 0 56 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 66L0 50V16l28-16 28 16v34L28 66zm0-66L0 16v34l28 16 28-16V16L28 0z' fill='none' stroke='%23F0A830' stroke-opacity='0.14' stroke-width='1.5'/%3E%3C/svg%3E");
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff8ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #f0a830;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e08c13;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
