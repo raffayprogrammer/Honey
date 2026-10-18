@@ -61,7 +61,7 @@ export default function Benefits() {
       <div className="honeycomb absolute inset-0 opacity-30" />
       <div className="relative mx-auto max-w-7xl px-4">
         <h2 className="text-center font-serif text-4xl font-bold sm:text-5xl">
-          Royal Honey Helps{" "}
+          Pak Honey Helps{" "}
           <span className="text-gradient-honey">You For</span>
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-center text-cream-100/70">

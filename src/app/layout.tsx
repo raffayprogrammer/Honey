@@ -17,9 +17,9 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Royal Honey — Pure, Raw & Single-Origin Honey",
+  title: "Pak Honey — Pure, Raw & Single-Origin Honey | Sharjah, UAE",
   description:
-    "Premium raw honey, Sidr, Manuka, honeycomb and bee products. Harvested with care, delivered across the UAE.",
+    "Pak Honey Trading — premium raw honey, Sidr, Manuka, honeycomb and bee products. Based in Al Andalus Building, near Al Hamra Cinema, Al Mujarrah, Sharjah, UAE. Delivered across the UAE.",
   keywords: [
     "honey",
     "raw honey",

@@ -19,7 +19,7 @@ export const CURRENCY = "AED";
 export const products: Product[] = [
   {
     id: "sidr-royal",
-    name: "Royal Sidr Honey",
+    name: "Premium Sidr Honey",
     type: "Sidr / Jujube",
     origin: "Hadramout, Yemen",
     price: 189,

@@ -1,6 +1,6 @@
-# RoyalHoney 🍯
+# Pak Honey 🍯
 
-A premium honey e-commerce landing page built with **Next.js 14 (App Router)**,
+Pak Honey Trading — a premium honey e-commerce landing page built with **Next.js 14 (App Router)**,
 **TypeScript**, **Tailwind CSS**, **Framer Motion**, and a real **3D honey jar**
 rendered with **react-three-fiber + drei**.
 

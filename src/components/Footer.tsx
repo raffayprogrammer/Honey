@@ -69,24 +69,31 @@ export default function Footer() {
                 </svg>
               </span>
               <span className="font-serif text-xl font-bold">
-                Royal<span className="text-honey-400">Honey</span>
+                PAK&nbsp;<span className="text-honey-400">HONEY</span>
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm text-cream-100/70">
-              Pure, raw, single-origin honey and bee products — harvested with
-              care and delivered across the UAE.
+              Pak Honey Trading — pure, raw, single-origin honey and bee
+              products, harvested with care and delivered across the UAE.
             </p>
-            <div className="mt-5 space-y-2 text-sm text-cream-100/70">
-              <p className="flex items-center gap-2">
-                <MapPin size={15} className="text-honey-400" /> Dubai, United
-                Arab Emirates
+            <div className="mt-5 space-y-2.5 text-sm text-cream-100/70">
+              <p className="flex items-start gap-2">
+                <MapPin size={15} className="mt-0.5 shrink-0 text-honey-400" />
+                Al Andalus Building, near Al Hamra Cinema, Al Mujarrah, Sharjah,
+                UAE
               </p>
-              <p className="flex items-center gap-2">
-                <Phone size={15} className="text-honey-400" /> +971 4 000 0000
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail size={15} className="text-honey-400" /> hello@royalhoney.ae
-              </p>
+              <a
+                href="tel:+971507970454"
+                className="flex items-center gap-2 transition hover:text-honey-300"
+              >
+                <Phone size={15} className="text-honey-400" /> +971 50 797 0454
+              </a>
+              <a
+                href="mailto:Pak.honey@hotmail.com"
+                className="flex items-center gap-2 transition hover:text-honey-300"
+              >
+                <Mail size={15} className="text-honey-400" /> Pak.honey@hotmail.com
+              </a>
             </div>
           </div>
 
@@ -113,7 +120,7 @@ export default function Footer() {
       <div className="relative border-t border-cream-100/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row">
           <p className="text-sm text-cream-100/60">
-            © {new Date().getFullYear()} RoyalHoney. All rights reserved.
+            © {new Date().getFullYear()} Pak Honey Trading. All rights reserved.
           </p>
           <div className="flex gap-3">
             {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (

@@ -13,6 +13,7 @@ import {
   Instagram,
   Youtube,
   Truck,
+  Phone,
 } from "lucide-react";
 import { categories } from "@/data/products";
 
@@ -56,8 +57,15 @@ export default function Navbar() {
               Inside UAE
             </span>
           </div>
-          <div className="hidden items-center gap-2 md:flex">
-            <span>🇦🇪 English</span>
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href="tel:+971507970454"
+              className="flex items-center gap-1.5 transition hover:text-honey-300"
+            >
+              <Phone size={14} className="text-honey-300" /> +971 50 797 0454
+            </a>
+            <span className="text-honey-300">·</span>
+            <span>🇦🇪 EN</span>
             <span className="text-honey-300">·</span>
             <span>AED</span>
           </div>
@@ -80,9 +88,9 @@ export default function Navbar() {
               </svg>
             </span>
             <span className="font-serif text-xl font-bold leading-none text-cocoa-900">
-              Royal<span className="text-gradient-honey">Honey</span>
-              <span className="block text-[9px] font-sans font-semibold tracking-[0.3em] text-honey-700">
-                BACK TO NATURE
+              PAK&nbsp;<span className="text-gradient-honey">HONEY</span>
+              <span className="block text-[9px] font-sans font-semibold tracking-[0.28em] text-honey-700">
+                PURE NATURAL HONEY
               </span>
             </span>
           </a>
