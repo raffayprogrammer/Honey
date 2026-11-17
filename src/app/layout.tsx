@@ -19,7 +19,7 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "Pak Honey — Pure, Raw & Single-Origin Honey | Sharjah, UAE",
   description:
-    "Pak Honey Trading — premium raw honey, Sidr, Manuka, honeycomb and bee products. Based in Al Andalus Building, near Al Hamra Cinema, Al Mujarrah, Sharjah, UAE. Delivered across the UAE.",
+    "Pak Honey Trading — premium raw honey, Sidr, Manuka, honeycomb and bee products. Visit us at Shop No. 15 & 16, Al Andalus Complex, Opposite Al Mubarak Center, Arouba Street, Sharjah, UAE. Delivered across the UAE.",
   keywords: [
     "honey",
     "raw honey",

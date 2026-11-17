@@ -63,13 +63,13 @@ export default function Footer() {
         <div className="relative mt-14 grid gap-10 pb-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2">
-              <span className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-cream-50">
+              <span className="relative grid h-11 w-11 place-items-center">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo-white.png"
                   alt="Pak Honey"
-                  width={38}
-                  height={38}
-                  className="object-contain mix-blend-multiply"
+                  width={44}
+                  height={44}
+                  className="object-contain"
                 />
               </span>
               <span className="font-serif text-xl font-bold">
@@ -83,14 +83,20 @@ export default function Footer() {
             <div className="mt-5 space-y-2.5 text-sm text-cream-100/70">
               <p className="flex items-start gap-2">
                 <MapPin size={15} className="mt-0.5 shrink-0 text-honey-400" />
-                Al Andalus Building, near Al Hamra Cinema, Al Mujarrah, Sharjah,
-                UAE
+                Pak Honey Trading, Shop No. 15 &amp; 16, Al Andalus Complex,
+                Opposite Al Mubarak Center, Arouba Street, Sharjah, UAE
               </p>
               <a
                 href="tel:+971507970454"
                 className="flex items-center gap-2 transition hover:text-honey-300"
               >
                 <Phone size={15} className="text-honey-400" /> +971 50 797 0454
+              </a>
+              <a
+                href="tel:+971553388933"
+                className="flex items-center gap-2 transition hover:text-honey-300"
+              >
+                <Phone size={15} className="text-honey-400" /> +971 55 338 8933
               </a>
               <a
                 href="mailto:Pak.honey@hotmail.com"

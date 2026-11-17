@@ -66,6 +66,13 @@ export default function Navbar() {
               <Phone size={14} className="text-honey-300" /> +971 50 797 0454
             </a>
             <span className="text-honey-300">·</span>
+            <a
+              href="tel:+971553388933"
+              className="flex items-center gap-1.5 transition hover:text-honey-300"
+            >
+              +971 55 338 8933
+            </a>
+            <span className="text-honey-300">·</span>
             <span>🇦🇪 EN</span>
             <span className="text-honey-300">·</span>
             <span>AED</span>
@@ -84,12 +91,12 @@ export default function Navbar() {
           <a href="#top" className="flex shrink-0 items-center gap-2">
             <span className="relative h-12 w-12 shrink-0">
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="Pak Honey"
                 fill
                 priority
                 sizes="48px"
-                className="object-contain mix-blend-multiply"
+                className="object-contain"
               />
             </span>
             <span className="font-serif text-xl font-bold leading-none text-cocoa-900">
